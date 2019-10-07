@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <style>
+@keyframes fadein{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.post{
+    width: 500px;
+    border: 1px solid gray;
+    animation: fadein 1s;
+}
+
+.contents{
+    width: 100%;
+}
+
+.user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.user>img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.user>div{
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.user>div:hover{
+    color: red;
+    font-size: 30px;
+}
+
+.posts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.posts>.post{
+    margin-top: 30px;
+}
+        </style>
+    </head>
+    <body>
+        <div class="posts">
+            <div class="post">
+                <div class="user">
+                    <img src="/uploads/캡처.PNG">
+                    <div>junhee916</div>
+                </div>
+                <img src="/uploads/알프스.jpg" class="contents">
+            </div>
+        </div> 
+    </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            @keyframes fadein{
+                from{
+                    opacity: 0;
+                }
+                to{
+                    opacity: 1;
+                }
+            }
+
+            .post{
+                width: 500px;
+                border: 1px solid gray;
+                animation: fadein 1s;
+            }
+
+            .user{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .user>.title{
+                background-color: powderblue;
+                color: white;
+                text-align: center;
+                font-weight: 500;
+                border-bottom: 1px solid gray;
+                width: 100%
+            }
+
+            .user>.mybtn>button{
+                cursor: pointer;
+            }
+            
+
+            .posts{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .posts>.post{
+                margin-top: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="/uploadprocess" method="POST" enctype="multipart/form-data">
+       <div class="posts">
+           <div class="post">
+               <div class="user">
+                   <div class="title"><h1>contents 사용할 img</h1></div>
+                   <div class="mybtn">
+                       <input type="file" name="myfile">
+                       <button>전송</button>
+                   </div>
+               </div>
+           </div>
+       </div>
+        </form>
+    </body>
+</html>
