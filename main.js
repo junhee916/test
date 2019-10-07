@@ -11,10 +11,10 @@ let multer = require("multer")
 let WebSocket = require("ws")
 let socketIo = require("socket.io")
 let connection = mysql.createConnection({
-    user: "root",
-    host: "localhost",
-    password: "123123",
-    database: "testdb"
+    user: "admin",
+    host: "database-1.ccia79mprjnt.ap-northeast-2.rds.amazonaws.com",
+    password: "123123123",
+    database: "test"
 })
 
 connection.connect()
